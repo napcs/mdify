@@ -1,8 +1,8 @@
 .PHONY: all clean
 
-VERSION = $(shell go run cmd/mdify/main.go -v | cut -c15-)
+VERSION = $(shell go run ./cmd/mdify -v | cut -c15-)
 BINARY_NAME = mdify
-SOURCE = cmd/mdify/main.go
+SOURCE = ./cmd/mdify
 
 # Function to build for a specific platform
 # Usage: $(call build,platform_dir,GOOS,GOARCH,binary_name)
